@@ -37,6 +37,7 @@ func getCityData (cityName : String) async throws -> cityData? {
                                        temperature: temperature,
                                        humidity: humidity,
                                        Uv_index: uvIndex)
+            
             return cityDataObj
             }
     }catch
