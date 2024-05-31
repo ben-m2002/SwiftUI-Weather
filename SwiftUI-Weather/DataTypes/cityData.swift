@@ -9,9 +9,9 @@ import Foundation
 
 struct cityData{
     let city : String
-    let localtime : String
-    let descriptions : [String]
-    let temperature : Int
-    let humidity : Int
-    let Uv_index : Int
+    let country : String
+    let description : String
+    let temperature : Double
+    let lowTemp : Double
+    let highTemp : Double
 }

@@ -33,7 +33,7 @@ struct ContentView: View {
                 Spacer()
                 Button{
                     isNight.toggle()
-                    fetchCityData(cityName: "New York")
+                    fetchCityData(lat: 44.34, lon: 10.99)
                 }label: {
                     // this is what button looks like
                     WeatherButton(buttonTitle: "Change Day Time", backgroundColor: .white, foregroundColor: .blue)
@@ -115,10 +115,10 @@ struct MainWeatherView: View{
 }
 
 
-func fetchCityData(cityName: String) {
+func fetchCityData(lat : Double, lon : Double) {
     Task {
         do {
-            if let cityData = try await getCityData(cityName: cityName) {
+            if let cityData = try await getCityData(lat: lat, lon: lon) {
                 print("City: \(cityData.city), Temperature: \(cityData.temperature)")
             } else {
                 print("City data not available.")
